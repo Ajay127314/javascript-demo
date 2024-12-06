@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body>
+
+    <script>
+       function startClock() {
+    setInterval(() => {
+        let now = new Date(); // Get the current date and time
+        let hours = String(now.getHours()).padStart(2, '0'); // Get hours (24-hour format)
+        let minutes = String(now.getMinutes()).padStart(2, '0'); // Get minutes
+        let seconds = String(now.getSeconds()).padStart(2, '0'); // Get seconds
+        document.writeln(`${hours}:${minutes}:${seconds}`+"<br>");
+        
+         // Print the time in HH:MM:SS format
+    }, 1000); // Run the function every second
+}
+ 
+// Start the clock
+startClock();
+
+
+    </script>
+    
+</body>
+</html>

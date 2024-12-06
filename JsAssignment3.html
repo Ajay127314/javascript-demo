@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+
+    <script>
+function findSecondLowestAndGreatest(arr) {
+    // Remove duplicates and sort the array
+    arr = [...new Set(arr)].sort((a, b) => a - b);
+    
+    // Return second lowest and second greatest numbers
+    return `${arr[1]}, ${arr[arr.length - 2]}`;
+}
+ 
+// Call the function with a sample array
+let result = findSecondLowestAndGreatest([1, 2, 3, 4, 5]);
+ 
+// Print the result
+document.writeln("The 2nd lowest and 2nd greatest of array is :"+result); 
+
+
+
+    </script>
+    
+</body>
+</html>
